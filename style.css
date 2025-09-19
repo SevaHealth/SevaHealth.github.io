@@ -55,7 +55,7 @@ a{ color: inherit; text-decoration: none; }
   justify-content: center;
 }
 .hero-overlay{
-  background: rgba(255,255,255,0.65);
+  background: rgba(255, 255, 255, 0.439);
   width: 100%;
   height: 100%;
   display: flex;
