@@ -46,10 +46,21 @@ a{ color: inherit; text-decoration: none; }
 .nav-list a:hover, .nav-list a:focus{ background: var(--sage); color: var(--white); outline: none; }
 
 /* ===== Hero ===== */
-.hero{ background: linear-gradient(180deg, var(--rose), var(--peach)); padding: clamp(2rem, 5vw, 4rem) 0; }
-.hero-inner{ text-align:center; max-width: 800px; }
-.hero h2{ font-family: "Playfair Display", Georgia, serif; font-size: clamp(1.4rem, 1.4rem + 2vw, 2.4rem); margin: 0 0 .6rem; }
-.hero p{ margin:.25rem 0 1.2rem; color: var(--ink-70); }
+.hero{ 
+  background: url("images/mountainRange.png") center/cover no-repeat;
+  padding: clamp(2rem, 5vw, 4rem) 0; }
+
+.hero-inner{ 
+  text-align:center; 
+  max-width: 800px; }
+.hero h2{ 
+  font-family: "Playfair Display", Georgia, serif; 
+  font-size: clamp(1.4rem, 1.4rem + 2vw, 2.4rem); 
+  margin: 0 0 .6rem; }
+
+.hero p{ 
+  margin:.25rem 0 1.2rem; 
+  color: var(--ink-70); }
 
 /* ===== Buttons ===== */
 .btn{ display:inline-block; padding:.6rem 1rem; border-radius:.7rem; border: 2px solid var(--sage); font-weight:700; letter-spacing:.02em; }
