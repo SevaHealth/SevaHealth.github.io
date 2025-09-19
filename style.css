@@ -54,8 +54,8 @@ a{ color: inherit; text-decoration: none; }
   align-items: center;
   justify-content: center;
 }
+/*  background: rgba(255,255,255,0.65); /* translucent overlay for text readability */
 .hero-overlay{
-  background: rgba(255,255,255,0.65); /* translucent overlay for text readability */
   width: 100%;
   height: 100%;
   display: flex;
