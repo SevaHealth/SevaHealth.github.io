@@ -157,3 +157,11 @@ a{ color: inherit; text-decoration: none; }
   .feature-grid{ grid-template-columns: 1fr; }
   .footer-inner{ flex-direction: column; }
 }
+
+feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns in a line */
+  gap: 1.2rem;                           /* spacing between boxes */
+  margin: 2rem 0;
+}
+
