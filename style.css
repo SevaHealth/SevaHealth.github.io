@@ -1,167 +1,288 @@
 /* ===== Color System ===== */
 :root{
-  --sage: #a8c3b0;   /* primary accent */
-  --rose: #f4e9e1;   /* soft background */
-  --peach: #fdf4ed;  /* lightest background */
-  --lilac: #dad4ec;  /* secondary accent */
-  --ink: #243026;    /* dark text */
+  --sage: #a8c3b0;
+  --rose: #f4e9e1;
+  --peach: #fdf4ed;
+  --lilac: #dad4ec;
+  --ink: #243026;
   --ink-70: rgba(36,48,38,0.7);
   --white: #fff;
 }
 
-/* ===== Base ===== */
-*{ box-sizing: border-box; }
-html, body{ height: 100%; }
+/* Optional: make sizing more predictable */
+* { box-sizing: border-box; }
+
 body{
   margin: 0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   color: var(--ink);
-  background: var(--peach);
-  line-height: 1.6;
 }
-img{ max-width: 100%; height: auto; display: block; }
-a{ color: inherit; text-decoration: none; }
-.container{ width: min(1100px, 92%); margin: 0 auto; }
-.skip-link{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
-.skip-link:focus{ position: static; width:auto; height:auto; padding: .5rem .75rem; background: var(--lilac); border-radius: .5rem; }
 
-/* ===== Announcement ===== */
-.announcement{ background: var(--lilac); color: #2a2550; }
-.announcement-inner{ display:flex; gap: 1rem; align-items:center; justify-content:center; padding:.6rem 0; }
-.announcement-text{ margin:0; font-weight:700; letter-spacing:.3px; }
-
-/* ===== Header ===== */
-.site-header{ background: var(--rose); border-bottom: 1px solid rgba(0,0,0,0.06); position: sticky; top:0; z-index: 20; }
-.header-inner{ display:flex; align-items:center; justify-content:space-between; padding: .8rem 0; gap: 1rem; }
-.brand{ display:flex; align-items:center; gap:.9rem; }
-.brand-logo{ width: 56px; height: 56px; object-fit: contain; border-radius: .75rem; background: var(--peach); padding: .25rem; border: 1px solid rgba(0,0,0,0.06); }
-.brand-title{ font-family: "Playfair Display", Georgia, serif; font-size: clamp(1.1rem, 2.1vw + .5rem, 1.6rem); line-height: 1.2; margin: 0; }
-.brand-subtitle{ margin:.15rem 0 0; font-size:.95rem; color: var(--ink-70); }
-
-/* ===== Nav ===== */
-.primary-nav{ position: relative; }
-.nav-toggle{ display:none; background: transparent; border: 1px solid rgba(0,0,0,.15); padding:.4rem .55rem; border-radius:.5rem; font-size:1.1rem; }
-.nav-list{ list-style:none; display:flex; gap:1rem; margin:0; padding:0; }
-.nav-list a{ display:inline-block; padding:.55rem .7rem; border-radius:.6rem; font-weight:600; text-transform: uppercase; letter-spacing:.02em; font-size:.9rem; }
-.nav-list a:hover, .nav-list a:focus{ background: var(--sage); color: var(--white); outline: none; }
-
-/* ===== Hero ===== */
-.hero{ 
-  position: relative;
-  background: url("images/mountainRange.png") center/cover no-repeat;
-  min-height: 60vh;
+/* Announcement banner */
+.announcment{
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+
+  background-color: var(--rose); /* change if desired */
+  padding: 0.75rem 2rem;
+  font-weight: 600;
 }
-.hero-overlay{
-  background: rgba(255, 255, 255, 0.439);
-  width: 100%;
-  height: 100%;
+
+/* ===== Header layout + background ===== */
+header{
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: clamp(2rem, 5vw, 4rem) 0;
-  }
-  
-.hero-inner{ 
-  text-align:center; 
-  max-width: 800px; }
-.hero h2{ 
-  font-family: "Playfair Display", Georgia, serif; 
-  font-size: clamp(1.4rem, 1.4rem + 2vw, 2.4rem); 
-  margin: 0 0 .6rem; }
+  justify-content: space-between;     /* logo left, nav right */
+  padding: 1rem 2rem;
 
-.hero p{ 
-  margin:.25rem 0 1.2rem; 
-  color: var(--ink-70); }
-
-/* ===== Buttons ===== */
-.btn{ display:inline-block; padding:.6rem 1rem; border-radius:.7rem; border: 2px solid var(--sage); font-weight:700; letter-spacing:.02em; }
-.btn-primary{ background: var(--sage); color: var(--white); border-color: var(--sage); }
-.btn-primary:hover, .btn-primary:focus{ filter: brightness(0.95); }
-.btn-outline{ background: transparent; color: var(--ink); }
-.btn-outline:hover, .btn-outline:focus{ background: var(--sage); color: var(--white); }
-
-/* ===== Feature Grid ===== */
-/* ===== Feature Grid ===== */
-.feature-card{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 1 / 1;                 /* keeps them square */
-  border-radius: 1rem;
-  overflow: hidden;
+  background-color: var(--sage);
   background-size: cover;
   background-position: center;
-  border: 1px solid rgba(0,0,0,.08);
-  transition: transform .18s ease, box-shadow .18s ease;
-  color: var(--white);
-  text-align: center;
-  text-shadow: 0 2px 6px rgba(0,0,0,.5);
+  background-repeat: no-repeat;
+}
+
+header .brand img{
+  width: 100px;
+  height: auto;
+  display: block;
+}
+
+/* Nav list on the right */
+.primary-nav .nav-list{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.primary-nav .nav-list a{
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 600;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+}
+
+.primary-nav .nav-list a:hover{
+  background-color: lavenderblush;
+}
+
+/* ===== Hero / Welcome section background image ===== */
+.hero{
+  background-image: url("images/Mountain.png"); /* adjust path if needed */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 4rem 2rem;
+}
+
+/* If you want the overlay to help text readability */
+.hero-overlay{
+  background: rgba(255,255,255,0.55);
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ===== Feature boxes in a row ===== */
+.feature-grid{
+  display: flex;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.feature-card{
+  flex: 1;                 /* 3 equal columns */
+  text-decoration: none;
+  color: inherit;
+
+  border-radius: 16px;
+  padding: 2rem;
+  background: var(--peach);
+  min-height: 180px;
+  display: block;
 }
 
 .feature-card:hover{
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(0,0,0,.1);
+  transform: translateY(-2px);
 }
 
-.feature-overlay{
-  background: rgba(0,0,0,0.4);        /* dark overlay for readability */
-  width: 100%;
-  height: 100%;
+/* Optional: make cards stack on small screens */
+@media (max-width: 800px){
+  .feature-grid{
+    flex-direction: column;
+  }
+}
+
+.hero { 
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  background-image: url("images/mountainRange.png"); 
+  padding: 2rem;
+}
+
+.hero btn {
+  background: var(--rose);
+}
+
+
+
+main{
+  padding: 3rem 2rem;
+}
+
+main section{
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+}
+
+.about-info{
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto 4rem;
+}
+
+/* Left image */
+.about-info img{
+  width: 260px;
+  height: auto;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* Right text column */
+.about-text{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 1.2rem;
-  transition: background .2s ease;
 }
 
-.feature-card:hover .feature-overlay{ 
-  background: rgba(0,0,0,0.55); 
+.about-text h3{
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
 }
 
-/* Background images for each card */
-.feature-card.functional-medicine{
-  background-image: url("images/dnaHelix.jpg");
-}
-.feature-card.ayurveda{
-  background-image: url("images/ayurveda.jpg");
-}
-.feature-card.health-coaching{
-  background-image: url("images/health-coaching.jpg");
+.about-text ul{
+  margin: 0;
+  padding-left: 1.25rem;
 }
 
-/* ===== Footer ===== */
-.site-footer{ background: var(--rose); margin-top: 2rem; border-top: 1px solid rgba(0,0,0,.06); }
-.footer-inner{ display:flex; gap: 2rem; justify-content: space-between; align-items: flex-start; padding: 1.5rem 0; }
-.footer-contact h4{ margin:.25rem 0 .6rem; font-size:1.05rem; }
-.footer-contact ul{ list-style:none; margin:0; padding:0; }
-.footer-contact li{ margin:.25rem 0; }
-.footer-logos{ display:flex; align-items:center; gap:1rem; }
-.footer-logos img{ width: 90px; height:auto; object-fit: contain; filter: grayscale(20%); opacity:.9; }
-.copyright{ background: var(--peach); border-top: 1px solid rgba(0,0,0,.06); }
-.copyright p{ margin:0; padding:.9rem 0; text-align:center; font-size:.92rem; color: var(--ink-70); }
-
-/* ===== Responsive ===== */
-@media (max-width: 900px){
-  .feature-grid{ grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 720px){
-  .nav-toggle{ display:inline-block; }
-  .nav-list{ position:absolute; right:0; top: 120%; background: var(--rose); border:1px solid rgba(0,0,0,.08); border-radius:.75rem; padding:.35rem; flex-direction:column; gap:.25rem; min-width: 230px; display:none; }
-  .nav-list.open{ display:flex; }
-  .feature-grid{ grid-template-columns: 1fr; }
-  .footer-inner{ flex-direction: column; }
+.about-text li{
+  margin-bottom: 0.5rem;
 }
 
-feature-grid {
+
+.philosphy{
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+  border:#fdf4ed;
+  border-style: solid;
+  padding:2rem;
+}
+
+/* Left paragraph */
+.philosphy > p{
+  flex: 2;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Right definition box */
+.philosphy > div{
+  flex: 1;
+  background-color: var(--peach);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.philosphy h4{
+  margin-top: 0;
+  font-family: "Playfair Display", serif;
+}
+
+
+
+/*FOOTER*/
+footer{
+  background-color: var(--sage);
+  padding: 3rem 2rem 1.5rem;
+  color: var(--ink);
+}
+
+/* Main footer layout */
+footer{
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns in a line */
-  gap: 1.2rem;                           /* spacing between boxes */
-  margin: 2rem 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
+/* ===== Contact Info ===== */
+.contact-info h4{
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-family: "Playfair Display", serif;
+}
+
+.contact-info ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li{
+  margin-bottom: 0.5rem;
+}
+
+.contact-info a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-info a:hover{
+  text-decoration: underline;
+}
+
+/* ===== Certification Logos ===== */
+.footer-logos{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer-logos img{
+  max-height: 60px;
+  width: auto;
+}
+
+/* ===== Copyright ===== */
+.copyright{
+  grid-column: 1 / -1; /* span full width */
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px){
+  footer{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-logos{
+    justify-content: center;
+  }
+}

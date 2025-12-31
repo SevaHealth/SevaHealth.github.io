@@ -9,42 +9,93 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-  <!-- Skip link for accessibility -->
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- Site-wide announcement banner -->
-  <div class="announcement" role="region" aria-label="Clinic announcement">
-    <div class="container announcement-inner">
-      <p class="announcement-text">Now Accepting New Patients</p>
-      <a class="btn btn-primary" href="new-patients.html">Sign Up</a>
-    </div>
-  </div>
+  <section class="announcment" aria-label="Clinic announcement">
+    <p>Now Accepting New Patients</p>
+    <a class="btn btn-primary" href="new-patients.html">Sign Up</a>
+  </section>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/">
-        <img src="images/logo.png" alt="Seva Health logo" class="brand-logo" />
-        <div class="brand-text">
-          <h1 class="brand-title">Jaspreet Kaur, M.D., IFMCP</h1>
-          <p class="brand-subtitle">Internal Medicine · Functional Medicine · Ayurveda</p>
-        </div>
-      </a>
+  <header>
+    <a class="brand" href="/">
+      <img src="images/SevaHealthLogo.jpg" alt="Seva Health logo"/>
+    </a>
 
-      <!-- Primary navigation -->
-      <nav class="primary-nav" aria-label="Primary">
-        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">☰</button>
-        <ul id="nav-menu" class="nav-list">
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="conditions.html">Conditions Treated</a></li>
-          <li><a href="new-patients.html">New Patients</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul id="nav-menu" class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="conditions.html">Conditions Treated</a></li>
+        <li><a href="newPatients.html">New Patients</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </nav>
   </header>
 
-  
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="container hero-inner">
+        <h2>Partner with a board-certified internist and IFM-certified practitioner to restore balance and unlock your body’s healing potential.</h2>
+        <a class="btn" href="new-patients.html">Become a Patient</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+    <section class="about-info">
+      <img src="images/JaspreetKaur.png" alt="Dr. Jaspreet Kaur.">
+      
+      <div class="about-text">
+      <h3>Jaspreet Kaur, M.D., IFMCP</h3>
+      <ul>
+        <li>Certified by the American Board of Internal Medicine</li>
+        <li>Institute of Functional Medicine Certified Practitioner</li>
+        <li>Certified in Therapeutic Food Plans by the Institute of Functional Medicine</li>
+        <li>Ayurvedic Health Counselor (National Ayurvedic Medical Association)</li>
+        <li>Member of American Academy of Anti-Aging Medicine</li>
+      </ul>
+      </div>
+    </section>
+
+    <section class="philosphy">
+      <p>The philosophy of my practice has always been <em>seva</em>. I have worked as an
+        internal medicine physician for 25+ years and have extensive experience
+        managing chronic and autoimmune diseases. With a person-centered approach,
+        join me to restore balance, prevent illness, and unlock your body’s innate
+        ability to heal.</p>
+
+      <div>
+        <h4>Seva</h4>
+        <p>[se-va] verb</p>
+        <p>A Sanskrit word meaning selfless service</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section class="contact-info">
+      <h4>Contact Me</h4>
+      <ul>
+        <li><strong>Phone:</strong> <a href="tel:+1-832-975-0054">(832)975-0054</a></li>
+        <li><strong>Fax:</strong> (956)254-0954</li>
+        <li><strong>Email:</strong> <a href="mailto:jkaur@functionalmedicinepractice.com">jkaur@functionalmedicinepractice.com</a></li>
+      </ul>
+    </section>
+
+    <section class="footer-logos" aria-label="Certifications">
+      <img src="images/cert-ifmcp.png" alt="IFM Certified Practitioner" />
+      <img src="images/cert-abim.png" alt="American Board of Internal Medicine" />
+      <img src="images/cert-third.png" alt="Certification logo" />
+    </section>
+
+    <div class="copyright">
+      <p>© <span id="year"></span> Jaspreet Kaur, M.D., IFMCP. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
