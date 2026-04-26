@@ -4,13 +4,13 @@
    ============================================ */
 
 :root {
-    /* Teal-green (medical trust, healing) */
+    /* Teal-green */
     --primary: #1A6B5C;
     --primary-dark: #0E4A3E;
     --primary-light: #2D8B78;
     --primary-pale: #E4F2EE;
 
-    /* Saffron-gold (Ayurveda, warmth, wisdom) */
+    /* Saffron-gold */
     --saffron: #C8882E;
     --saffron-light: #DBA44A;
     --saffron-pale: #FFF5E6;
@@ -90,7 +90,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
    ============================================ */
 .topbar{position:fixed;top:0;left:0;width:100%;z-index:1001;background:var(--primary-dark);padding:.45rem 0;font-size:.78rem}
 .topbar__inner{display:flex;align-items:center;justify-content:space-between}
-.topbar__name{font-family:var(--heading);font-size:.85rem;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.5px}
+.topbar__name{font-family:var(--heading);font-size:1.2rem;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.5px}
 .topbar__badge{display:inline-flex;align-items:center;gap:.5rem;color:var(--white);font-weight:800;font-size:1rem;letter-spacing:.5px;text-transform:uppercase}
 .topbar__badge i{color:#5ce08a;font-size:1.1rem}
 .topbar__links{display:flex;gap:1.5rem}
@@ -130,15 +130,16 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 /* ============================================
    HERO
    ============================================ */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,#0E2E28 0%,#1A6B5C 50%,#0E4A3E 100%)}
-
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background-image:url('../images/hero-mountain.jpg');background-size: cover;background-position: center;background-repeat: no-repeat;}
+.hero::before {content: '';position: absolute;inset: 0;background: rgba(0, 0, 0, 0.45);z-index: 1;}
+ 
 /* Content */
 .hero__content{position:relative;z-index:2;text-align:center;padding:0 1.5rem;display:flex;flex-direction:column;align-items:center;gap:2rem}
 
 .hero__logo-block{margin-bottom:.5rem}
 .hero__brand{font-family:var(--heading);font-size:clamp(3.5rem,8vw,6rem);font-weight:800;color:var(--white);line-height:1.1;text-shadow:0 2px 30px rgba(0,0,0,.3),0 1px 4px rgba(0,0,0,.2);letter-spacing:6px;text-transform:uppercase}
 
-.hero__tagline{font-size:clamp(.72rem,1.2vw,.88rem);font-weight:500;text-transform:uppercase;letter-spacing:3px;color:rgba(255,255,255,.75);margin-top:1rem;text-shadow:0 1px 8px rgba(0,0,0,.2)}
+.hero__tagline{font-size:clamp(1rem,1.2vw,.88rem);font-weight:500;text-transform:uppercase;letter-spacing:3px;color:rgba(255, 255, 255, 0.957);margin-top:1rem;text-shadow:0 1px 8px rgba(0,0,0,.2)}
 
 .hero__actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
 
@@ -148,7 +149,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .hero__philosophy-main{font-family:var(--heading);font-size:clamp(1.3rem,2.5vw,1.7rem);font-weight:700;font-style:italic;color:var(--white);line-height:1.6;text-shadow:0 1px 10px rgba(0,0,0,.2)}
 .hero__philosophy-main em{color:var(--saffron-light);font-style:italic}
 .hero__philosophy-sub{font-family:var(--heading);font-size:clamp(1.1rem,2vw,1.35rem);font-style:italic;color:rgba(255,255,255,.7);margin-top:.75rem;line-height:1.6}
-.hero__philosophy-cite{display:block;margin-top:.75rem;font-size:.85rem;color:rgba(255,255,255,.45);font-style:normal}
+.hero__philosophy-cite{display:block;margin-top:.75rem;font-size:.9rem;color:rgba(255, 255, 255, 0.836);font-style:normal}
 
 /* ============================================
    ABOUT
@@ -392,7 +393,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .footer{background:var(--bg-dark);color:rgba(255,255,255,.7);padding:3.5rem 0 0}
 
 .footer__badges{display:flex;align-items:center;justify-content:center;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
-.footer__badges img{height:80px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:.7;transition:opacity var(--ease)}
+.footer__badges img{height:80px;width:auto;object-fit:contain}
 .footer__badges img:hover{opacity:1}
 
 .footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;padding:3rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
