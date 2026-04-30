@@ -4,13 +4,13 @@
    ============================================ */
 
 :root {
-    /* Teal-green */
+    /* Teal-green (medical trust, healing) */
     --primary: #1A6B5C;
     --primary-dark: #0E4A3E;
     --primary-light: #2D8B78;
     --primary-pale: #E4F2EE;
 
-    /* Saffron-gold */
+    /* Saffron-gold (Ayurveda, warmth, wisdom) */
     --saffron: #C8882E;
     --saffron-light: #DBA44A;
     --saffron-pale: #FFF5E6;
@@ -90,7 +90,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
    ============================================ */
 .topbar{position:fixed;top:0;left:0;width:100%;z-index:1001;background:var(--primary-dark);padding:.45rem 0;font-size:.78rem}
 .topbar__inner{display:flex;align-items:center;justify-content:space-between}
-.topbar__name{font-family:var(--heading);font-size:1.2rem;font-weight:600;color:rgba(255,255,255,.85);letter-spacing:.5px}
+.topbar__name{font-family:var(--heading);font-size:1.15rem;font-weight:700;color:#fff;letter-spacing:.75px}
 .topbar__badge{display:inline-flex;align-items:center;gap:.5rem;color:var(--white);font-weight:800;font-size:1rem;letter-spacing:.5px;text-transform:uppercase}
 .topbar__badge i{color:#5ce08a;font-size:1.1rem}
 .topbar__links{display:flex;gap:1.5rem}
@@ -130,16 +130,15 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 /* ============================================
    HERO
    ============================================ */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background-image:url('../images/hero-mountain.jpg');background-size: cover;background-position: center;background-repeat: no-repeat;}
-.hero::before {content: '';position: absolute;inset: 0;background: rgba(0, 0, 0, 0.45);z-index: 1;}
- 
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background-image:linear-gradient(135deg,rgba(14,46,40,.72) 0%,rgba(26,107,92,.55) 50%,rgba(14,74,62,.78) 100%),url('../images/background_image.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:scroll}
+
 /* Content */
 .hero__content{position:relative;z-index:2;text-align:center;padding:0 1.5rem;display:flex;flex-direction:column;align-items:center;gap:2rem}
 
 .hero__logo-block{margin-bottom:.5rem}
 .hero__brand{font-family:var(--heading);font-size:clamp(3.5rem,8vw,6rem);font-weight:800;color:var(--white);line-height:1.1;text-shadow:0 2px 30px rgba(0,0,0,.3),0 1px 4px rgba(0,0,0,.2);letter-spacing:6px;text-transform:uppercase}
 
-.hero__tagline{font-size:clamp(1rem,1.2vw,.88rem);font-weight:500;text-transform:uppercase;letter-spacing:3px;color:rgba(255, 255, 255, 0.957);margin-top:1rem;text-shadow:0 1px 8px rgba(0,0,0,.2)}
+.hero__tagline{font-size:clamp(.72rem,1.2vw,.88rem);font-weight:500;text-transform:uppercase;letter-spacing:3px;color:rgba(255,255,255,.75);margin-top:1rem;text-shadow:0 1px 8px rgba(0,0,0,.2)}
 
 .hero__actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
 
@@ -149,7 +148,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .hero__philosophy-main{font-family:var(--heading);font-size:clamp(1.3rem,2.5vw,1.7rem);font-weight:700;font-style:italic;color:var(--white);line-height:1.6;text-shadow:0 1px 10px rgba(0,0,0,.2)}
 .hero__philosophy-main em{color:var(--saffron-light);font-style:italic}
 .hero__philosophy-sub{font-family:var(--heading);font-size:clamp(1.1rem,2vw,1.35rem);font-style:italic;color:rgba(255,255,255,.7);margin-top:.75rem;line-height:1.6}
-.hero__philosophy-cite{display:block;margin-top:.75rem;font-size:.9rem;color:rgba(255, 255, 255, 0.836);font-style:normal}
+.hero__philosophy-cite{display:block;margin-top:.75rem;font-size:.85rem;color:rgba(255,255,255,.45);font-style:normal}
 
 /* ============================================
    ABOUT
@@ -319,9 +318,9 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 .patients__payment{max-width:800px;margin:0 auto}
 .payment__content{background:var(--white);border-radius:var(--radius);border:1px solid var(--border-lt);padding:2rem}
 .payment__methods p{font-size:.92rem;color:var(--text-md);margin-bottom:1rem}
-.payment__icons{display:flex;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem}
-.payment__icons span{display:flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--text-md);padding:.5rem 1rem;background:var(--bg);border-radius:6px;border:1px solid var(--border-lt)}
-.payment__icons span i{font-size:1.3rem;color:var(--primary)}
+.payment__icons{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;margin-bottom:1.5rem}
+.payment__icons span{display:inline-flex;align-items:center;gap:.35rem;font-size:.8rem;color:var(--text-md);padding:.45rem .7rem;background:var(--bg);border-radius:6px;border:1px solid var(--border-lt);white-space:nowrap}
+.payment__icons span i{font-size:1.1rem;color:var(--primary)}
 .payment__notice{display:flex;align-items:flex-start;gap:.75rem;padding:1rem;background:var(--saffron-pale);border-radius:6px;border-left:3px solid var(--saffron)}
 .payment__notice i{color:var(--saffron);margin-top:3px;flex-shrink:0}
 .payment__notice p{font-size:.85rem;color:var(--text-md);line-height:1.5}
@@ -392,9 +391,9 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
    ============================================ */
 .footer{background:var(--bg-dark);color:rgba(255,255,255,.7);padding:3.5rem 0 0}
 
-.footer__badges{display:flex;align-items:center;justify-content:center;gap:3rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
-.footer__badges img{height:80px;width:auto;object-fit:contain}
-.footer__badges img:hover{opacity:1}
+.footer__badges{display:flex;align-items:center;justify-content:center;gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.footer__badges img{height:150px;width:auto;object-fit:contain;object-position:center;transition:transform var(--ease)}
+.footer__badges img:hover{transform:translateY(-3px)}
 
 .footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:2.5rem;padding:3rem 0;border-bottom:1px solid rgba(255,255,255,.1)}
 .footer__brand p{font-size:.82rem;line-height:1.7;margin-top:.5rem}
@@ -443,7 +442,7 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 @media(max-width:768px){
     /* Topbar mobile */
     .topbar__inner{flex-direction:column;gap:.3rem;text-align:center}
-    .topbar__name{font-size:.75rem}
+    .topbar__name{font-size:1rem}
     .topbar__badge{font-size:.8rem}
     .topbar__links{gap:1rem}
     .topbar{padding:.4rem 0}
@@ -494,7 +493,6 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
 
     /* Footer */
     .footer__badges{gap:1.5rem}
-    .footer__badges img{height:60px}
     .footer__grid{grid-template-columns:1fr;gap:2rem}
     .footer__copy{flex-direction:column;gap:.75rem;text-align:center}
 }
@@ -504,4 +502,436 @@ button{cursor:pointer;border:none;background:none;font-family:inherit}
     .payment__icons{flex-direction:column}
     .about__experience{width:90px;height:90px;bottom:-12px;right:-12px}
     .about__experience-num{font-size:1.8rem}
+}
+
+/* ============================================
+   HERO DOCTOR NAME (item 1)
+   ============================================ */
+.hero__doctor{
+    font-family:var(--heading);
+    font-size:clamp(2rem,4.5vw,3.6rem);
+    font-weight:700;
+    color:var(--saffron-light);
+    margin-top:1.25rem;
+    line-height:1.25;
+    letter-spacing:1px;
+    text-shadow:0 2px 20px rgba(0,0,0,.3),0 1px 4px rgba(0,0,0,.2);
+}
+.hero__doctor span{
+    display:inline-block;
+    font-size:.55em;
+    font-weight:500;
+    font-style:italic;
+    color:rgba(255,255,255,.85);
+    letter-spacing:2px;
+    margin-left:.4em;
+    vertical-align:middle;
+}
+@media(max-width:768px){
+    .hero__doctor span{display:block;margin-left:0;margin-top:.3rem}
+}
+
+/* ============================================
+   CONTACT SERVING LINE (item 5)
+   ============================================ */
+.contact__serving-line{
+    max-width:820px;
+    margin:0 auto 3rem;
+    padding:1rem 1.5rem;
+    background:var(--primary-pale);
+    border-left:4px solid var(--saffron);
+    border-right:4px solid var(--saffron);
+    color:var(--primary-dark);
+    font-size:.92rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    line-height:1.6;
+    border-radius:6px;
+}
+.contact__serving-line i{color:var(--saffron);margin-right:.5rem}
+@media(max-width:768px){
+    .contact__serving-line{font-size:.78rem;letter-spacing:1px;padding:.85rem 1rem}
+}
+
+/* ============================================
+   SERVICE FEES — 4 CATEGORIES (items 10, 11)
+   ============================================ */
+.patients__fees-tagline{
+    text-align:center;
+    font-size:1.05rem;
+    color:var(--primary-dark);
+    background:var(--saffron-pale);
+    border:1px dashed var(--saffron);
+    padding:.85rem 1.25rem;
+    border-radius:50px;
+    max-width:640px;
+    margin:-.5rem auto 2.5rem;
+    font-weight:600;
+}
+.patients__fees-tagline i{color:var(--saffron);margin-right:.4rem}
+
+.fees__categories{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:1.25rem;
+    margin-bottom:2rem;
+}
+.fee-cat{
+    background:var(--white);
+    padding:1.75rem 1.5rem;
+    border-radius:var(--radius);
+    border:1px solid var(--border-lt);
+    transition:all var(--ease);
+    display:flex;
+    flex-direction:column;
+}
+.fee-cat:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+.fee-cat__icon{
+    width:50px;height:50px;border-radius:50%;
+    background:var(--primary-pale);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:1rem;
+}
+.fee-cat__icon i{font-size:1.2rem;color:var(--primary)}
+.fee-cat__label{
+    font-size:.7rem;font-weight:700;
+    text-transform:uppercase;letter-spacing:2px;
+    color:var(--saffron);
+    margin-bottom:.5rem;
+}
+.fee-cat h4{
+    font-family:var(--heading);
+    font-size:1.25rem;
+    color:var(--primary-dark);
+    margin-bottom:.75rem;
+    line-height:1.3;
+    font-weight:600;
+}
+.fee-cat__price{
+    display:inline-block;
+    color:var(--primary);
+    font-weight:700;
+    margin-left:.4rem;
+    font-size:1.05rem;
+}
+.fee-cat__price small{font-size:.7em;color:var(--text-lt);font-weight:500}
+.fee-cat>p{
+    font-size:.92rem;
+    color:var(--text-md);
+    line-height:1.7;
+    margin-bottom:.75rem;
+}
+.fee-cat__note{
+    display:flex;align-items:flex-start;gap:.5rem;
+    background:var(--saffron-pale);
+    padding:.75rem .9rem;
+    border-radius:6px;
+    border-left:3px solid var(--saffron);
+    font-size:.82rem !important;
+    color:var(--text-md);
+    margin-top:auto;
+    margin-bottom:0 !important;
+}
+.fee-cat__note i{color:var(--saffron);flex-shrink:0;margin-top:3px}
+.fee-cat__list{
+    list-style:none;
+    margin:.25rem 0 .5rem;
+    padding-left:0;
+}
+.fee-cat__list li{
+    position:relative;
+    padding-left:1.4rem;
+    margin-bottom:.55rem;
+    font-size:.92rem;
+    color:var(--text-md);
+    line-height:1.6;
+}
+.fee-cat__list li::before{
+    content:'\f00c';
+    font-family:'Font Awesome 6 Free';
+    font-weight:900;
+    position:absolute;
+    left:0;top:6px;
+    color:var(--primary-light);
+    font-size:.72rem;
+}
+.fee-cat__pricelist{
+    list-style:none;
+    margin:.25rem 0 0;
+    padding:0;
+}
+.fee-cat__pricelist li{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:.85rem 0;
+    border-bottom:1px solid var(--border-lt);
+    font-size:.92rem;
+    color:var(--text-md);
+    gap:1rem;
+}
+.fee-cat__pricelist li:last-child{border-bottom:none}
+.fee-cat__pricelist li strong{
+    color:var(--primary);
+    font-family:var(--heading);
+    font-size:1.25rem;
+    font-weight:700;
+    flex-shrink:0;
+    display:inline-flex;
+    align-items:baseline;
+    gap:.4rem;
+}
+.fee-cat__pricelist .price-old{
+    position:relative;
+    display:inline-block;
+    color:var(--primary);
+    font-family:var(--heading);
+    font-size:1.25rem;
+    font-weight:700;
+}
+.fee-cat__pricelist .price-old::after{
+    content:'';
+    position:absolute;
+    left:-4px;
+    right:-4px;
+    top:50%;
+    height:2.5px;
+    background:#d32f2f;
+    transform:translateY(-50%) rotate(-15deg);
+    transform-origin:center;
+    pointer-events:none;
+    border-radius:2px;
+}
+.fee-cat__pricelist .price-new{
+    color:var(--saffron);
+}
+
+/* Category 4 — feature card */
+.fee-cat--feature{
+    grid-column:1 / -1;
+    padding:2.5rem;
+    border:2px solid var(--saffron);
+    background:linear-gradient(135deg,var(--white) 0%,var(--saffron-pale) 100%);
+    margin-top:.5rem;
+}
+.fee-cat--feature:hover{transform:none}
+.fee-cat__label--feature{
+    display:inline-flex;
+    align-items:center;
+    gap:.45rem;
+    background:var(--primary);
+    color:var(--white);
+    padding:.45rem 1rem;
+    border-radius:50px;
+    letter-spacing:1.5px;
+    font-size:.7rem;
+    margin-bottom:.85rem;
+    align-self:flex-start;
+}
+.fee-cat__label--feature i{color:#ffb3d9}
+.fee-cat--feature h4{
+    font-size:clamp(1.4rem,2.5vw,1.85rem);
+    color:var(--primary-dark);
+    margin-bottom:1rem;
+    line-height:1.25;
+}
+.fee-cat--feature h4 em{
+    font-style:italic;
+    color:var(--saffron);
+    font-weight:500;
+}
+.fee-cat__lead{
+    font-size:1rem !important;
+    color:var(--primary-dark) !important;
+    font-weight:500 !important;
+    line-height:1.7 !important;
+}
+.fee-cat__sub{
+    font-family:var(--heading);
+    font-size:1.15rem;
+    color:var(--primary-dark);
+    margin:1.75rem 0 .6rem;
+    padding-top:1.25rem;
+    border-top:1px solid rgba(200,136,46,.25);
+    font-weight:600;
+}
+
+.phases{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1rem;
+    margin:1rem 0 .5rem;
+}
+.phase{
+    background:var(--white);
+    padding:1.5rem 1.25rem;
+    border-radius:var(--radius);
+    border:1px solid var(--border-lt);
+    border-top:4px solid var(--primary);
+}
+.phase__num{
+    font-size:.7rem;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--saffron);
+}
+.phase h6{
+    font-family:var(--heading);
+    font-size:1.1rem;
+    color:var(--primary-dark);
+    margin:.3rem 0 .35rem;
+    font-weight:600;
+}
+.phase h6 span{
+    display:block;
+    font-family:var(--heading);
+    font-size:1.15rem;
+    font-weight:700;
+    color:var(--primary-dark);
+    margin-top:.15rem;
+    letter-spacing:.5px;
+}
+.phase>p{
+    font-size:.9rem;
+    color:var(--text-md);
+    margin-bottom:.6rem;
+    line-height:1.6;
+}
+.phase ul{
+    list-style:none;
+    padding:0;
+    margin:.4rem 0;
+}
+.phase ul li{
+    position:relative;
+    padding-left:1.2rem;
+    margin-bottom:.4rem;
+    font-size:.85rem;
+    color:var(--text-md);
+    line-height:1.55;
+}
+.phase ul li::before{
+    content:'\f00c';
+    font-family:'Font Awesome 6 Free';
+    font-weight:900;
+    position:absolute;
+    left:0;top:5px;
+    color:var(--primary-light);
+    font-size:.65rem;
+}
+.phase__outcome{
+    font-size:.85rem !important;
+    color:var(--primary-dark) !important;
+    background:var(--primary-pale);
+    padding:.65rem .85rem;
+    border-radius:6px;
+    margin-top:.75rem !important;
+    margin-bottom:0 !important;
+    border-left:3px solid var(--primary);
+}
+.phase__outcome em{font-style:italic;font-weight:600}
+
+.investment{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:1rem;
+    margin:1rem 0 1.25rem;
+}
+.investment__tier{
+    background:var(--white);
+    padding:1.75rem 1.5rem;
+    border-radius:var(--radius);
+    border:1px solid var(--border-lt);
+    text-align:center;
+    position:relative;
+}
+.investment__tier--premium{
+    border:2px solid var(--primary);
+    background:linear-gradient(180deg,var(--primary-pale) 0%,var(--white) 100%);
+}
+.investment__badge{
+    position:absolute;
+    top:-12px;
+    left:50%;
+    transform:translateX(-50%);
+    background:var(--saffron);
+    color:var(--white);
+    font-size:.65rem;
+    font-weight:700;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+    padding:.3rem .8rem;
+    border-radius:50px;
+}
+.investment__name{
+    display:block;
+    font-family:var(--heading);
+    font-size:1.15rem;
+    color:var(--primary-dark);
+    font-weight:600;
+    margin-bottom:.35rem;
+}
+.investment__price{
+    display:block;
+    font-family:var(--heading);
+    font-size:2.2rem;
+    font-weight:700;
+    color:var(--primary);
+    margin-bottom:.65rem;
+    line-height:1;
+}
+.investment__tier p{
+    font-size:.88rem !important;
+    color:var(--text-md);
+    margin:0 !important;
+    line-height:1.55;
+}
+
+@media(max-width:1024px){
+    .fees__categories{grid-template-columns:repeat(2,1fr)}
+    .fee-cat--feature{padding:2rem}
+}
+@media(max-width:768px){
+    .fees__categories{grid-template-columns:1fr}
+    .phases{grid-template-columns:1fr}
+    .investment{grid-template-columns:1fr}
+    .fee-cat--feature{padding:1.5rem 1.25rem}
+    .fee-cat--feature h4{font-size:1.3rem}
+}
+
+/* ============================================
+   FOOTER — Brand inline + SEO list (item 9)
+   ============================================ */
+.footer__logo--inline{margin-bottom:1rem}
+.footer__logo--inline .logo__main{
+    font-size:1.85rem;
+    letter-spacing:1.5px;
+    color:var(--white);
+    white-space:nowrap;
+}
+.footer__seo-heading{
+    font-family:var(--heading);
+    font-size:.92rem;
+    color:var(--saffron-light);
+    margin:.25rem 0 .85rem;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
+    line-height:1.4;
+    font-weight:600;
+}
+.footer__seo-tagline{
+    font-size:.88rem;
+    color:rgba(255,255,255,.75);
+    line-height:1.6;
+    margin:.25rem 0 0;
+    font-style:italic;
+}
+
+/* ============================================
+   FOOTER — ABIM badge enlarged (item 7)
+   ============================================ */
+@media(max-width:768px){
+    .footer__badges img{height:110px;width:auto}
 }
